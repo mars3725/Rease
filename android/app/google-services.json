@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "229084727910",
+    "project_id": "rentview-92c0f",
+    "storage_bucket": "rentview-92c0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229084727910:android:99540a479454c8c4f37ba7",
+        "android_client_info": {
+          "package_name": "com.mattmohandiss.rentview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229084727910-qkolfuhq27niqqm6k17rai3dg56jctmm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mattmohandiss.rentview",
+            "certificate_hash": "6015be134816ec74663ab43416590557aa65603f"
+          }
+        },
+        {
+          "client_id": "229084727910-8pdqb2e9vs34bfs80jsqj167q57tmmo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4M56i-QbssEdJ79ykdskBQP8vti5tUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229084727910-8pdqb2e9vs34bfs80jsqj167q57tmmo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
