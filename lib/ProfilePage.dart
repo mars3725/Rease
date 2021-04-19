@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'LoginPage.dart';
@@ -8,15 +9,14 @@ class ProfilePage extends StatefulWidget {
 }
 
 class ProfilePageState extends State<ProfilePage> {
-
-  @override
-  void initState() {
-    super.initState();
-  }
+  bool _editing = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          child: Icon(_editing? Icons.check : Icons.edit),
+          onPressed: ()=> setState(()=> _editing = !_editing)),
       appBar: AppBar(
         title: Text('Profile', style: TextStyle(color: Colors.black)),
         iconTheme: IconThemeData(color: Colors.black),
@@ -29,12 +29,15 @@ class ProfilePageState extends State<ProfilePage> {
             Padding(padding: EdgeInsets.all(15)),
             Text('Matt Mohandiss', style: TextStyle(fontSize: 32)),
             Padding(padding: EdgeInsets.all(30)),
-            Text('This is my bio and I like it that way.'),
+            Padding(padding: EdgeInsets.all(30),
+              child: Text("I'm a fourth year student at the University of Tennessee Knoxville. I like to run, cook, and take care of my dog, Sadie!", textAlign: TextAlign.center)),
             Padding(padding: EdgeInsets.all(50)),
-            ElevatedButton(
+            OutlinedButton(
                 onPressed: ()=> googleSignIn.signOut().then(
-                    (_) => Navigator.popUntil(context, ModalRoute.withName('/'))).then((value) => Navigator.of(context).pushNamed('/login')),
-                child: Text('Log out')),
+                        (_) => Navigator.popUntil(context, 
+                            ModalRoute.withName('/'))).then(
+                        (value) => Navigator.of(context).pushNamed('/login')),
+                child: Text('Log out'))
           ],
         )));
   }
